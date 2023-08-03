@@ -31,7 +31,7 @@ apiClient
       },
     })
   .then(res => res.data)
-})
+});
   // useData<Game>(
   //   "/games",
   //   {
