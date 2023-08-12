@@ -10,7 +10,6 @@ import GameGrid from '../components/GameGrid';
 
 
 const HomePage = () => {
-
   return (
     <Grid
       templateAreas={{

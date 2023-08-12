@@ -5,6 +5,7 @@ export interface GameQuery {
   platformId?: number;
   sortOrder?: string;
   searchText?: string;
+  description?: string;
 }
 
 interface GameQueryStore {
@@ -26,6 +27,7 @@ const useGameQueryStore = create<GameQueryStore>((set) => ({
     set((store) => ({ gameQuery: { ...store.gameQuery, platformId } })),
   setSortOrder: (sortOrder: string) =>
     set((store) => ({ gameQuery: { ...store.gameQuery, sortOrder } })),
+  setDescription: (description: string) => set({ gameQuery: { description } }),
 }));
 
 export default useGameQueryStore;

@@ -16,8 +16,8 @@ export interface FetchResponse<T> {
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "21ead42227eb4cf3aeb7b54aae57fccc"
-  }
+    key: "21ead42227eb4cf3aeb7b54aae57fccc",
+  },
 });
 
 class APIClient<T> {
@@ -32,6 +32,15 @@ class APIClient<T> {
       axiosInstance
         //config to configure http request, such as params, headers, URL,etc
         .get<FetchResponse<T>>(this.endpoint, config)
+        .then((res) => res.data)
+    );
+  };
+
+  get = (id: number | string) => {
+    return (
+      axiosInstance
+        // There is no need for FetchResponse because we are fetching a single game
+        .get<T>(this.endpoint + "/" + id)
         .then((res) => res.data)
     );
   };
