@@ -1,6 +1,7 @@
 import { Box, Heading, Spinner, Text } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
 import useGame from '../hooks/useGame'
+import ShowMore from '../components/ShowMore';
 
 
 const GameDetailPage = () => {
@@ -14,7 +15,7 @@ const GameDetailPage = () => {
   return (
     <Box p={5}>
     <Heading>{game.name}</Heading>
-    <Text>{game.description_raw}</Text>
+    <ShowMore children={game.description_raw}/>
     </Box>
   )
 }
