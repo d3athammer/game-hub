@@ -5,6 +5,8 @@ import ShowMore from '../components/ShowMore';
 import useGame from '../hooks/useGame';
 import CriticScore from '../components/CriticScore';
 import GameAttributes from '../components/GameAttributes';
+import useMovies from '../hooks/useTrailers';
+import GameTrailer from '../components/GameTrailer';
 
 
 const GameDetailPage = () => {
@@ -23,6 +25,7 @@ const GameDetailPage = () => {
         <ShowMore children={game.description_raw} />
       </Box>
       <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
     </>
     //Nested map for the 4 components? Map the 4 cards with the 4 components and then map each components with their respective data
   );
