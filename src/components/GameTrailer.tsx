@@ -17,4 +17,4 @@ if (error || !data) throw error;
 return (first) ? (<video src={first?.data[480]} poster={first.preview} controls/>) : null
 }
 
-export default GameTrailer
+export default GameTrailer;
