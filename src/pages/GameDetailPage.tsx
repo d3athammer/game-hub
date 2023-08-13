@@ -23,7 +23,6 @@ const GameDetailPage = () => {
           <Heading>{game.name}</Heading>
           <ShowMore children={game.description_raw} />
         </GridItem>
-
         <GridItem>
           <GameAttributes game={game} />
           <GameTrailer gameId={game.id} />
