@@ -1,6 +1,4 @@
-import React from 'react'
 import useTrailers from '../hooks/useTrailers'
-import { Trailer } from '../entities/Trailer';
 
 interface Props {
   gameId: number

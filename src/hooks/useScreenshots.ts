@@ -1,6 +1,6 @@
 import APIClient from "../services/api-client";
 import { useQuery } from "@tanstack/react-query";
-import { Screenshot } from "../entities/Screenshot";
+import Screenshot from "../entities/Screenshot";
 
 const useScreenShots = (gameId: number) => {
   //This is the link you are fetching
